@@ -1,10 +1,9 @@
-import { useState, useContext } from "react";
+import { useState } from "react";
 
 import "./signup-form.styles.scss";
 
 import FormInput from "../form-input/FormInput";
 import Button from "../button/Button";
-import { UserContext } from "../../contexts/user-context";
 
 import {
   createAuthUser,
@@ -23,8 +22,6 @@ function SignupForm() {
 
   const { displayName, email, password, confirmPassword } = formFields;
 
-  const { setCurrentUser } = useContext(UserContext);
-
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
   };
@@ -39,8 +36,6 @@ function SignupForm() {
 
     try {
       const { user } = await createAuthUser(email, password);
-
-      setCurrentUser(user);
 
       await createUserDocumentFromAuth(user, { displayName });
       resetFormFields();
