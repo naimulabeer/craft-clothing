@@ -1,8 +1,14 @@
 import { Fragment, useContext } from "react";
 import { Link, Outlet } from "react-router-dom";
+
+import CartIcon from "../../components/cart-icon/CartIcon";
+import CartDropdown from "../../components/cart-dropdown/CartDropdown";
+
 import { ReactComponent as CraftLogo } from "../../assets/ccraft.svg";
+
 import { UserContext } from "../../contexts/user-context";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
+
 import "./navigation.styles.scss";
 
 function Navigation() {
@@ -28,7 +34,9 @@ function Navigation() {
               SIGN IN
             </Link>
           )}
+          <CartIcon />
         </div>
+        <CartDropdown />
       </div>
       <Outlet />
     </>
