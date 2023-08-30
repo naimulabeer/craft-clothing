@@ -1,12 +1,13 @@
 .button-container {
+  min-width: 165px;
   width: auto;
   height: 50px;
   letter-spacing: 0.5px;
   line-height: 50px;
   padding: 0 35px 0 35px;
-  font-size: 15px;
+  font-size: 14px;
   background-color: black;
-  color: white;
+  color: rgb(233, 230, 203);
   text-transform: uppercase;
   font-weight: bolder;
   border: none;
@@ -15,8 +16,8 @@
   justify-content: center;
 
   &:hover {
-    background-color: white;
-    color: black;
+    background-color: rgb(210, 228, 213);
+    color: rgb(13, 48, 29);
     border: 1px solid black;
   }
 
