@@ -1,5 +1,5 @@
 .checkout-container {
-  width: 55%;
+  width: 65%;
   min-height: 90vh;
   display: flex;
   flex-direction: column;
@@ -27,5 +27,12 @@
     margin-top: 30px;
     margin-left: auto;
     font-size: 36px;
+  }
+}
+
+@media (max-width: 776px) {
+  .checkout-container {
+    width: 90%;
+    min-height: 90vh;
   }
 }

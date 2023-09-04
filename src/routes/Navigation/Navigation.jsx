@@ -1,4 +1,4 @@
-import { Fragment, useContext } from "react";
+import { Fragment, useContext, useEffect } from "react";
 import { Link, Outlet } from "react-router-dom";
 
 import CartIcon from "../../components/cart-icon/CartIcon";
@@ -15,7 +15,25 @@ import "./navigation.styles.scss";
 
 function Navigation() {
   const { currentUser } = useContext(UserContext);
-  const { isCartOpen } = useContext(CartContext);
+  const { isCartOpen, setIsCartOpen } = useContext(CartContext);
+
+  useEffect(() => {
+    const closeCartOnOutsideClick = (event) => {
+      if (isCartOpen && !event.target.closest(".cart-dropdown-container")) {
+        setIsCartOpen(false);
+      }
+    };
+
+    if (isCartOpen) {
+      document.addEventListener("mousedown", closeCartOnOutsideClick);
+    } else {
+      document.removeEventListener("mousedown", closeCartOnOutsideClick);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", closeCartOnOutsideClick);
+    };
+  }, [isCartOpen, setIsCartOpen]);
 
   return (
     <>

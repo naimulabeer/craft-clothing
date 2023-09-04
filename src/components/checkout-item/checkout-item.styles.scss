@@ -24,7 +24,7 @@
 
   .quantity {
     display: flex;
-    gap: 8px;
+    gap: 3px;
     align-items: center;
 
     .arrow {
@@ -39,5 +39,14 @@
   .remove-button {
     padding-left: 12px;
     cursor: pointer;
+  }
+}
+
+@media (max-width: 576px) {
+  .checkout-item-container {
+    .quantity {
+      flex-direction: column;
+      gap: 0px;
+    }
   }
 }

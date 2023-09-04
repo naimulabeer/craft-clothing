@@ -27,8 +27,8 @@ function CheckoutItem({ cartItem }) {
           <FaChevronCircleLeft />
         </div>
         <span className="value">{quantity}</span>
-        <div className="arrow">
-          <FaChevronCircleRight onClick={addItemHandler} />
+        <div className="arrow" onClick={addItemHandler}>
+          <FaChevronCircleRight />
         </div>
       </span>
       <span className="price">{price}</span>
