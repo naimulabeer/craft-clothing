@@ -3,7 +3,7 @@ import Home from "./routes/Home/Home";
 import Navigation from "./routes/Navigation/Navigation";
 import Authentication from "./routes/Authentication/Authentication";
 import Shop from "./routes/Shop/Shop";
-import Checkout from "./components/checkout/Checkout";
+import Checkout from "./routes/Checkout/Checkout";
 
 function App() {
   return (
