@@ -14,11 +14,15 @@ function Category() {
   }, [category, categoriesMap]);
 
   return (
-    <div className="category-container">
-      {products?.map((product) => (
-        <ProductCard key={product.id} product={product} />
-      ))}
-    </div>
+    <>
+      <h1 className="category-title">{category.toLocaleUpperCase()}</h1>
+
+      <div className="category-container">
+        {products?.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
+    </>
   );
 }
 
