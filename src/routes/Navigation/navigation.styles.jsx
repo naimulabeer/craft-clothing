@@ -8,20 +8,25 @@ export const NavigationContainer = styled.div`
   justify-content: space-between;
   margin-bottom: 25px;
   background-color: #6d597a;
-  border-radius: 16px;
-  padding: 4px;
+  border-radius: 26px;
+  padding: 6px;
 `;
 
 export const LogoContainer = styled(Link)`
   padding: 20px;
   display: flex;
-  gap: 5px;
+  gap: 10px;
   align-items: center;
+  color: antiquewhite;
 `;
 
 export const LogoTitle = styled.h1`
   font-size: 20px;
   color: white;
+
+  @media (max-width: 576px) {
+    font-size: 14px;
+  }
 `;
 
 export const NavLinks = styled.div`
