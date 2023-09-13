@@ -10,6 +10,11 @@ export const NavigationContainer = styled.div`
   background-color: #6d597a;
   border-radius: 26px;
   padding: 6px;
+
+  @media (max-width: 576px) {
+    width: auto;
+    padding: 2px;
+  }
 `;
 
 export const LogoContainer = styled(Link)`

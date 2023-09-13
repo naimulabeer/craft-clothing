@@ -10,3 +10,15 @@
   margin-bottom: 25px;
   text-align: center;
 }
+
+@media (max-width: 576px) {
+  .category-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 576px) and (max-width: 786px) {
+  .category-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

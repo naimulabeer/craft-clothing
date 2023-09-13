@@ -19,7 +19,7 @@ function CartDropdown() {
         {cartItems.map((item) => (
           <CartItem key={item.id} cartItem={item} />
         ))}
-        <span className="total">Total:{cartTotal} Tk.</span>
+        <span className="total">Total: {cartTotal} Tk.</span>
       </div>
 
       <Button onClick={goToCheckoutHandler}>CHECKOUT</Button>
